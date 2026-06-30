@@ -1,0 +1,92 @@
+/* LOGIN MODAL */
+
+const modal =
+document.getElementById("loginModal");
+
+const openBtn =
+document.getElementById("openLogin");
+
+const closeBtn =
+document.getElementById("closeLogin");
+
+openBtn.onclick = () => {
+
+modal.style.display = "flex";
+
+};
+
+closeBtn.onclick = () => {
+
+modal.style.display = "none";
+
+};
+
+window.onclick = (e) => {
+
+if(e.target == modal){
+
+modal.style.display = "none";
+
+}
+
+};
+
+/* PAGINATION */
+
+const buttons =
+document.querySelectorAll(".pagination button");
+
+buttons.forEach(button => {
+
+button.addEventListener("click",()=>{
+
+buttons.forEach(btn => {
+
+btn.classList.remove("active");
+
+});
+
+button.classList.add("active");
+
+});
+
+});
+
+/* HERO BUTTON SCROLL */
+
+const heroBtn =
+document.querySelector(".hero button");
+
+heroBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:800,
+behavior:"smooth"
+
+});
+
+});
+
+/* SEARCH */
+
+const searchInput =
+document.querySelector(".search input");
+
+searchInput.addEventListener("keyup",(e)=>{
+
+console.log("Searching for:",
+e.target.value);
+
+});
+
+/* NEWSLETTER */
+
+const newsletterBtn =
+document.querySelector(".newsletter button");
+
+newsletterBtn.addEventListener("click",()=>{
+
+alert("Thank you for subscribing!");
+
+});
